@@ -50,16 +50,16 @@ fileprivate struct CardViewModifier<Background: View>: ViewModifier {
     let animation: Animation
     
     init(
-        padding: CGFloat,// = 10,
-        cornerRadius: CGFloat,// = 10,
-        background: Background,// = Color(UIColor.quaternarySystemFill) as! Background,
-        blurRadius: CGFloat,// = 0,
+        padding: CGFloat,
+        cornerRadius: CGFloat,
+        background: Background,
+        blurRadius: CGFloat,
         transition: AnyTransition = .opacity,
-        animation: Animation// = .default
+        animation: Animation
     ) {
         self.padding = padding
         self.cornerRadius = cornerRadius
-        self.background = background    // Color(UIColor.quaternarySystemFill) as! Background
+        self.background = background
         self.blurRadius = blurRadius
         self.transition = transition
         self.animation = animation
