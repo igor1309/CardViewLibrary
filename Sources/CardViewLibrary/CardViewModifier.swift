@@ -11,11 +11,11 @@ import SwiftUI
 @available(iOS 13.0, *)
 extension View {
     
-    /// Wrap view as card
+    /// Wrap View as card
     /// - Parameters:
     ///   - padding: padding of the wrapped view
     ///   - cornerRadius: card cornerRadius
-    ///   - background: card background color, default quaternarySystemFill
+    ///   - background: card background: View (ex, color)
     ///   - blurRadius: card blur radius, default is 0
     ///   - transition: card transition, default opacity
     ///   - animation: card animation, default no animation
@@ -30,13 +30,16 @@ extension View {
     ) -> some View {
         
         self
-            .modifier(CardViewModifier(
-                padding: padding,
-                cornerRadius: cornerRadius,
-                background: background,
-                blurRadius: blurRadius,
-                transition: transition,
-                animation: animation))
+            .modifier(
+                CardViewModifier(
+                    padding: padding,
+                    cornerRadius: cornerRadius,
+                    background: background,
+                    blurRadius: blurRadius,
+                    transition: transition,
+                    animation: animation
+                )
+            )
     }
 }
 
