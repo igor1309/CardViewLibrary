@@ -1,3 +1,3 @@
 # CardViewLibrary
 
-A description of this package.
+A View wrapper as a Card.
