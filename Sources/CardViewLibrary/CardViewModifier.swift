@@ -11,7 +11,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 extension View {
     
-    /// Wrap View as card
+    /// Wrap View in a Card with background and other parameters
     /// - Parameters:
     ///   - padding: padding of the wrapped view
     ///   - cornerRadius: card cornerRadius
@@ -39,14 +39,14 @@ extension View {
                     transition: transition,
                     animation: animation
                 )
-            )
+        )
     }
 }
 
 @available(iOS 13.0, *)
 fileprivate struct CardViewModifier<Background: View>: ViewModifier {
     let padding: CGFloat
-    let background: Background//Color
+    let background: Background
     let blurRadius: CGFloat
     let cornerRadius: CGFloat
     let transition: AnyTransition
